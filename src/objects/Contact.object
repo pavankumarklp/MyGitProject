@@ -299,4 +299,11 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Languages_field_should_not_be_empty</fullName>
+        <active>true</active>
+        <description>Languages field shouldn&apos;t be empty if Level is selected</description>
+        <errorConditionFormula>AND(NOT(ISBLANK(TEXT(Level__c))),ISBLANK( Languages__c ))</errorConditionFormula>
+        <errorMessage>Languages field shouldn&apos;t be empty if Level is selected</errorMessage>
+    </validationRules>
 </CustomObject>
